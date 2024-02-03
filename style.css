@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto+Condensed:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 * {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -30,70 +31,58 @@ html {
     overflow-x: hidden;
 }
 
-body {
+body{
     background: var(--bg-color);
     color: var(--text-color);
 }
-/* .home3,.home{
-    background: url("https://wallpaperaccess.com/full/5651986.jpg");
-} */
+
 section {
     position: relative;
-    min-height: 012vh;
-    padding: 1rem 10% 10rem;
+    min-height: 12vh;
+    padding: 7.5em;
 }
-.social_media1 {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+/* .mb{
+    margin-right: 5rem;
+} */
+
+.lm{
+    display: none;
 }
-
-.social {
-    border: 0.1rem solid var(--light-color);
-    margin: .5rem;
-    font-size: 1.4rem;
-    padding: 1rex;
-    border-radius: 50%;
-    transition: 0.5s ease;
-
+.logoimg img{
+    width: 15vw;
 }
-
-.social:hover {
-    background: var(--light-color);
-    color: #1f242d;
-    box-shadow: 0 0s 0.5rem var(--light-color);
-}
-
 .header {
-    border-radius: 2rem;
-    background: var(--lineargradient-color);
-}
-
-.header {
-    margin-left: 18rem;
     position: relative;
-    top: 0;
-    left: 0;
-    width: 70%;
+    width: 100%;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
 }
-
-.header .sticky {
-    border-bottom: .1rem solid rgba(0, 0, 0, .2);
-}
-
 .logo {
     color: var(--text-color);
     font-size: 2rem;
     font-weight: 600;
     cursor: default;
 }
-
+.btnD{
+    float: right;
+    border: 0.1rem solid var(--light-color);
+    height: 5em;
+    width: 5em;
+    padding-top: 1.5em;
+    border-radius: 50%;
+    font-size: 1.9rem;
+    letter-spacing: 1;
+    box-shadow: 0 0 0.9rem var(--light-color);
+    transition: 0.5s ease;
+    text-align: center;
+}
+.main_content .btn{
+    display: none;
+    float: right;
+}
 .nav_bar a {
     color: var(--nav_bar-color);
     font-size: .99rem;
@@ -101,6 +90,10 @@ section {
     transition: .3sec;
 }
 
+.btn a{
+    margin-top: 2em;
+    color: var(--text-color);
+}
 .nav_bar a:hover,
 .nav_bar a.home1 {
     color: red;
@@ -122,19 +115,21 @@ section {
     justify-content: center;
     align-items: center;
 }
-
+.merge{
+    display: none;
+}
 .main_content h3 {
     padding-bottom: 1rem;
-    font-size: 2.9rem;
+    font-size: 1.9rem;
     font-weight: 700;
 }
 
 .main_content h3:nth-of-type(2) {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.4rem;
 }
 
 .main_content h1 {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: bolder;
     line-height: 1;
 }
@@ -207,6 +202,7 @@ span {
 .about_me p {
     font-size: 1.9rem;
     padding-bottom: 2rem;
+    text-align: center;
 }
 
 .about_img,
@@ -234,63 +230,25 @@ span {
 .me {
     color: var(--nav_bar-color);
 }
-
-/* .services-container{
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-}
-.services h2{
-    margin-bottom: 5rem;
-    font-size: 5rem;
-    text-align: center;
-}
-.service-box p{
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-.service-box h3{
-    font-size: large;
-    line-height: 1;
-}
-.services-container .service-box{
-    flex: 1 1 30rem;
-    background: var(--second-bg-color);
-    padding:2rem 3rem 4rem ;
-    border-radius: 2rem;
-    text-align: center;
-    border: .2rem solid var(--bg-color);
-}
-.service-box i{
-    font-size: 7rem;
-    color: var(--light-color);
-}
-.service-box:hover{
-    box-shadow:0 0 0.9rem var(--light-color) ;
-    border: 0.3rem solid var(--light-color);
-} */
-.portfolio {
+.project {
     background: var(--bg-color);
 }
 
-.portfolio h3 {
+.project h3 {
     font-size: 5rem;
     text-align: center;
     margin-bottom: 1.8rem;
 }
 
-.portfolio-box img {
+.project-box img {
     width: 35vw;
 }
 
-.portfolio-layer p {
+.project-layer p {
     margin-bottom: 1.5rem;
 }
 
-.portfolio-container {
+.project-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -298,8 +256,8 @@ span {
     gap: 2.5rem;
 }
 
-.portfolio-container,
-.portfolio-box {
+.project-container,
+.project-box {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
@@ -308,16 +266,16 @@ span {
 
 }
 
-.portfolio-box img {
-    width: 100;
+.project-box img {
+    width: 50em;
     transition: 0.1s ease;
 }
 
-.portfolio-box:hover img {
+.project-box:hover img {
     transform: scale(1, 1);
 }
 
-.portfolio-box .portfolio-layer {
+.project-box .project-layer {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -334,24 +292,24 @@ span {
     transition: 0.3s ease-out;
 }
 
-.portfolio-box:hover .portfolio-layer {
+.project-box:hover .project-layer {
     transform: translateY(0);
 }
 
-.portfolio-box h2 {
+.project-box h2 {
     font-size: 2rem;
     color: rgba(0, 0, 0, 1);
     font-weight: bolder;
 }
 
-.portfolio-box p {
+.project-box p {
     color: #000;
     font-size: 1rem;
     font-weight: 500;
 }
 
 
-.portfolio-layer i {
+.project-layer i {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -365,13 +323,13 @@ span {
     transition: .19s ease;
 }
 
-.portfolio-layer i:hover {
+.project-layer i:hover {
     background-color: var(--light-color);
     color: var(--main-color);
     box-shadow: 0 0 0.9rem var(--light-color);
 }
 
-.portfolio-box:hover {
+.project-box:hover {
     box-shadow: 0 0 0.9rem var(--light-color);
 }
 
@@ -399,6 +357,7 @@ span {
 }
 
 .contact h2 {
+
     text-align: center;
     font-size: 5rem;
     padding-bottom: 2rem;
@@ -421,11 +380,18 @@ input {
 }
 
 .contact {
-    background: var(--second-bg-color);
+    padding: 5rem;
+    background: url("https://www.nesabamedia.com/wp-content/uploads/2016/11/mengirim-dan-menerima-email.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 form {
+    
+    margin: 0;
+    margin-left: 8rem;
+    margin-right: 8rem;
     font-family: 'Playfair Display', serif;
-    background: var(--bg-color);
+    background: url("https://www.completecontroller.com/wp-content/uploads/iStock-943787198-1500x1000.jpg");
     padding: 5rem;
     border-radius: 2rem;
 }
@@ -465,12 +431,13 @@ form {
 }
 
 .footer {
+    background-color: var(--bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem 9%;
-    margin: 1rem;
+    padding: .5rem ;
+    /* margin: 1rem; */
 
 }
 
@@ -482,9 +449,9 @@ form {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 4rem;
-    height: 4rem;
-    width: 4rem;
+    font-size: 3.3rem;
+    height: 3.3rem;
+    width: 3.3rem;
     border: .3rem solid var(--light-color);
     border-radius: 50%;
     background: var(--second-bg-color);
@@ -497,27 +464,51 @@ form {
     background-color: var(--light-color);
     color: var(--second-bg-color);
 }
+.f{
+    display: flex;
+    justify-content: space-between;
+}
+.bacimg,.header{
+    background: url("https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 @media screen and (max-width:400px) {
     .header {
-        border-radius: 1em;
-        background: var(--lineargradient-color);
-        margin-left: 3em;
-        
+        border-radius: 0%;
+        background: transparent;
+        margin-left:0em;
+        width: 100%;
+    }
+    .header .logoM{
+        display: block;
+        font-family:cursive; 
     }
     .header .logo{
-        font-size: medium;
-        margin-right: 1em;
+        display: none;
+        font-family:cursive;   
     }
     .social {
-        border:solid var(--light-color);
-        font-size: 1rem;
-        border-radius: 50%;
-        transition: 0.5s ease;
+        display: none;
     
     }
-    .social i{
-        color:blanchedalmond;
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_bar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;        
+    }
+    .nav_bar a{
+        
+        margin: .3em;
+        margin-top:1em;
+    }
+    section {
+        padding: 5em 10% 10rem;
     }
     .social_media a {
         
@@ -528,19 +519,41 @@ form {
         margin: 1rem .5rem 1rem 0;
         transition: .19s ease;
     }
-    .nav_bar{
+    .logoimg{
         display: none;
     }
+    .lm a{
+        color: var(--text-color);
+    }
+    .lm{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        
+    }
+    .lm img{
+        display: block;
+        width: 5em;
+    }
     .main_content .btn{
+        display: block;
         font-size: 1em;
-        margin-top: 2em;
+        margin: 0;
+        cursor: pointer;
     }
     
     .main_content h3{
-        font-size: 1em;
+        font-size: 1.5em;
+        font-family: Neonderthaw;
+        line-height: 1em;
     }
     .main_content h1{
-        font-size: 2em;
+        font-size: 3em;
+        line-height: 1em;
+    }
+    .main_content p{
+        font-size: 1em;
+        line-height: 1em;
     }
     .home_image img{
         display: none;
@@ -548,6 +561,9 @@ form {
     #about{
         display: block;
         text-align: center;
+    }
+    .btnD{
+        display: none;
     }
     .about_me h2
     {
@@ -560,7 +576,7 @@ form {
     #about .btn{
         font-size: 1em;
     }
-    .portfolio-layer i {
+    .project-layer i {
         width: 2rem;
         height: 2rem;
         color: var(--light-color);
@@ -571,24 +587,24 @@ form {
         margin: 0;
         transition: .19s ease;
     }
-    .portfolio-box .portfolio-layer {
+    .project-box .project-layer {
         padding: 0;
     }
-    #portfolio h3{
+    #project h3{
         font-size: 2em;
     }
-    .portfolio-box h2{
+    .project-box h2{
         font-size: 1em;
     }
-    .portfolio-box p{
+    .project-box p{
         font-size: 1em;
     }
-    .portfolio-container {
+    .project-container {
         display: flex;
         flex-wrap: wrap;
         text-align: center;
     }
-    .portfolio-box img {
+    .project-box img {
         width: 100%;
     }
     .contact_me input {
@@ -609,6 +625,11 @@ form {
     .contact_me {
         display: block;
     }
+    .about_me p{
+        font-size: small;
+
+        text-align: justify;
+    }
     .contact h2 {
         text-align: center;
         font-size: 2em;
@@ -616,6 +637,7 @@ form {
     }
     form{
         padding: 4%; 
+        margin: 0%;
     }
     
     input[type=submit],
@@ -638,26 +660,176 @@ form {
 
     }
     .footer p {
-        font-size: .9rem;
+        font-size: .8rem;
         padding: 0;
     }
-    input::placeholder{
-        font-size: .8em;
+    input::placeholder,textarea::placeholder{
+        font-size: .7em;
+    }
+    .bacimg,.header{
+        background: url("https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio.jpg");
+        /* background-size: cover; */
     }
    /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
 }
 
-@media (min-width:480px) {
+@media screen and (min-width:400px) and (max-width:900px) {
+    .header {
+        border-radius: 0%;
+        background: transparent;
+        margin-left:0em;
+        width: 100%;
+        display: flex;
+
+    }
+    .merge{
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+
+    }
+    .nav_bar1 a{
+        color: #fff;
+        padding: .4em;
+    }
+    .merge img{
+        width: 15vw;
+    }
+    .header .logoimg,.header .link{
+        display: none;
+    }
+    .header .logoM{
+        display: none; 
+    }
+    .header .logo{
+        display: block;
+        font-family:cursive;   
+    }
+    .social {
+        display: none;
+    
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav_bar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content:flex-start;        
+    }
+    .nav_bar a{
+        
+        margin: .3em;
+        margin-top:1em;
+    }
+    section {
+        padding: 5em 10% 10rem;
+    }
+    .social_media a {
+        
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        font-size: 1rem;
+        margin: 1rem .5rem 1rem 0;
+        transition: .19s ease;
+    }
+    .lm {
+        display: none;
+    }
+    .main_content .btn{
+        display: block;
+        font-size: 1em;
+        margin: 0;
+        cursor: pointer;
+    }
+    
+    .main_content h3{
+        font-size: 1.5em;
+        font-family: Neonderthaw;
+        line-height: 1em;
+    }
+    .main_content h1{
+        font-size: 3em;
+        line-height: 1em;
+    }
+    .main_content p{
+        font-size: 1em;
+        line-height: 1em;
+    }
+    .home_image img{
+        display: none;
+    }
+    #about{
+        display: block;
+        text-align: center;
+    }
+    .btnD{
+        display: none;
+    }
+    .about_me h2
+    {
+        font-size: 3em;
+        text-align: center;
+    }
+    .about_me h3{
+        font-size: 1em;
+    }
+    #about .btn{
+        font-size: 1em;
+    }
+    .project-layer i {
+        width: 2rem;
+        height: 2rem;
+        color: var(--light-color);
+        border:solid transparent;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        padding: 0.5em;
+        margin: 0;
+        transition: .19s ease;
+    }
+    .project-container{
+        display: flex;
+        flex-wrap: wrap;     
+    }
+    .project-box img{
+        width: 35em;
+    }
+    
+    .me{
+        flex-direction: column;
+    }
+    .footer{
+        padding: 0;
+    }
+    .footer i {
+        font-size: 1em;
+        height: 2em;
+        width: 2em;
+        border:solid var(--light-color);
+        border-radius: 50%;
+        background: var(--second-bg-color);
+        color: var(--light-color);
+        box-shadow: 0 0 0.8rem var(--light-color);
+    
+
+    }
+    .footer p {
+        font-size: .8rem;
+        padding: 0;
+    }
+    input::placeholder,textarea::placeholder{
+        font-size: .7em;
+    }
+    .bacimg,.header{
+        background: url("https://e0.pxfuel.com/wallpapers/846/344/desktop-wallpaper-portfolio.jpg");
+        /* background-size: cover; */
+    }
     /* smartphones, Android phones, landscape iPhone */
 }
 
-@media (min-width:600px) {
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-}
-
-@media (min-width:801px) {
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-}
 
 @media (min-width:1025px) {
     /* big landscape tablets, laptops, and desktops */
